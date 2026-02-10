@@ -1,5 +1,5 @@
 #working with strings
-text="Privet, Danik"
+text="HEllo, Nursultan"
  
 #print the original string
 print(text)
@@ -23,4 +23,4 @@ print(text[-1])
 print(text[::-1])
  
 #replase "Danik" with "Stepka" in the string
-print(text.replace("Danik","Stepka"))
+print(text.replace("Nursultan","Alikhan"))
