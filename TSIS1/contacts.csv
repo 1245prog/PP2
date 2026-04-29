@@ -1,0 +1,6 @@
+name,email,birthday,group,phone,phone_type
+Alice Johnson,alice@gmail.com,1999-02-14,Friend,87071234567,mobile
+Alice Johnson,alice@gmail.com,1999-02-14,Friend,727123456,home
+Bob Smith,bob@company.com,1994-08-30,Work,87778889900,work
+Diana Kim,diana@gmail.com,2001-11-05,Family,87015556677,mobile
+Ken Lee,ken@outlook.com,1998-01-22,Other,70123456789,mobile

@@ -1,0 +1,74 @@
+from __future__ import annotations
+
+import os
+
+WINDOW_WIDTH = 640
+WINDOW_HEIGHT = 640
+CELL_SIZE = 20
+GRID_WIDTH = WINDOW_WIDTH // CELL_SIZE
+GRID_HEIGHT = WINDOW_HEIGHT // CELL_SIZE
+FPS = 60
+
+SETTINGS_FILE = r"C:\Study\PP2\TSIS\TSIS4\settings.json"
+
+DB_CONFIG = {
+    "dbname": os.getenv("SNAKE_DB_NAME", "snake_game"),
+    "user": os.getenv("SNAKE_DB_USER", "postgres"),
+    "password": os.getenv("SNAKE_DB_PASSWORD", "1234"),
+    "host": os.getenv("SNAKE_DB_HOST", "localhost"),
+    "port": int(os.getenv("SNAKE_DB_PORT", "5432")),
+}
+
+DEFAULT_SETTINGS = {
+    "snake_color": [0, 200, 0],
+    "grid_overlay": True,
+}
+
+BACKGROUND_COLOR = (20, 22, 25)
+GRID_COLOR = (40, 44, 48)
+TEXT_COLOR = (240, 240, 240)
+PANEL_COLOR = (32, 36, 42)
+BUTTON_COLOR = (64, 80, 110)
+BUTTON_HOVER_COLOR = (86, 108, 150)
+BUTTON_TEXT_COLOR = (255, 255, 255)
+
+FOOD_COLORS = {
+    1: (80, 220, 90),
+    2: (70, 195, 245),
+    3: (255, 195, 70),
+}
+
+TIMED_FOOD_COLOR = (255, 160, 60)
+POISON_COLOR = (110, 0, 0)
+SPEED_BOOST_COLOR = (100, 190, 255)
+SLOW_MOTION_COLOR = (170, 120, 255)
+SHIELD_COLOR = (130, 255, 170)
+
+FOOD_LEVEL_STEP = 5
+INITIAL_MOVE_DELAY_MS = 150
+MIN_MOVE_DELAY_MS = 60
+MOVE_DELAY_DECREASE_PER_LEVEL = 8
+
+FOOD_POINTS_CHOICES = (1, 2, 3)
+TIMED_FOOD_TTL_MS = 7000
+POISON_TTL_MS = 8000
+POWERUP_TTL_MS = 8000
+SPEED_BOOST_MS = 5000
+SLOW_MOTION_MS = 5000
+
+POWERUP_SPAWN_MIN_MS = 4500
+POWERUP_SPAWN_MAX_MS = 9000
+TIMED_FOOD_SPAWN_MIN_MS = 3000
+TIMED_FOOD_SPAWN_MAX_MS = 6500
+POISON_SPAWN_MIN_MS = 4000
+POISON_SPAWN_MAX_MS = 9000
+
+OBSTACLE_MIN_LEVEL = 3
+OBSTACLE_BASE_COUNT = 4
+OBSTACLE_MAX_COUNT = 16
+OBSTACLE_RETRY_LIMIT = 240
+
+COLOR_STEP = 15
+
+def clamp(value: int, low: int = 0, high: int = 255) -> int:
+    return max(low, min(high, int(value)))
